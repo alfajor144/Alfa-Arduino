@@ -6,7 +6,7 @@ void setup() {
   lc.clearDisplay(0);/* and clear the display */
 }
 void loop() {
-  
-  displayMatrizRandom(lc,100);
-  
+  //displayMatrizRandom(lc,100);
+  //displayMatrizAnalog(lc,100,0);
+  linalDisplay(lc,200);
 }
