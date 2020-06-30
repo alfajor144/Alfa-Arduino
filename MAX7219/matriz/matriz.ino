@@ -8,5 +8,5 @@ void setup() {
 void loop() {
   //displayMatrizRandom(lc,100);
   //displayMatrizAnalog(lc,100,0);
-  linalDisplay(lc,200);
+  linalDisplay(lc,20);
 }
