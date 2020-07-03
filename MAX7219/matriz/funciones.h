@@ -1,16 +1,11 @@
 /*
-- RED - VCC - 5.0V
-- BLACK - GND - GND
+VCC - 5.0V
+GND - GND
 
-- ROJO - DIN - MOSI - 11
-- BLANCO - LOAD - CE0 - 10
-- NARANJA - CLK - SCLK -13
+DIN - MOSI - 11
+LOAD - CE0 - 10
+CLK - SCLK -13
  */
-
-//matriz grande:
-//azul 13
-//blanco 11
-//amarillo 10
 
 #include "matrices.h" 
                                                                                                                       
