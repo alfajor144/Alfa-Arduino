@@ -1,5 +1,5 @@
 /*
-  *-----TX------TRANSMITER (3 pot + 1 bot)------*
+  *-----TX------TRANSMITER ------*
   * Arduino   NFR24
   *   7       CE
   *   8       CSN
@@ -27,12 +27,6 @@ const int pinA2 = A2;//homb
 const int pinA3 = A3;//codo
 const int pinA4 = A4;//base
 
-int A0i;//A0 input
-int A1i;
-int A2i;
-int A3i;
-int A4i;
-
 RF24 radio(7, 8); // CE, CSN
 const byte addresses[6] = "00001";
 void setup() {
@@ -44,20 +38,11 @@ void setup() {
 }
 void loop() {
   delay(5);
-  A0i = analogRead (pinA0);
-  msg.mun = map(A0i, 70, 888, 5, 175);
-  
-  A1i = analogRead (pinA1);
-  msg.pin = map(A1i, 300, 800, 5, 175);
-  
-  A2i = analogRead (pinA2);
-  msg.hom = map(A2i, 80, 900, 5, 175);
-  
-  A3i = analogRead (pinA3);
-  msg.cod = map(A3i, 200, 800, 5, 175);
-  
-  A4i = analogRead (pinA4);
-  msg.bas = map(A4i, 100, 800, 5, 175);
+  msg.mun = map(analogRead (pinA0), 100, 900, 5, 175);
+  msg.pin = map(analogRead (pinA1), 100, 900, 5, 175);
+  msg.hom = map(analogRead (pinA2), 100, 900, 5, 175);
+  msg.cod = map(analogRead (pinA3), 100, 900, 5, 175);
+  msg.bas = map(analogRead (pinA4), 100, 900, 5, 175);
 
   radio.write(&msg, sizeof(msg));
 }

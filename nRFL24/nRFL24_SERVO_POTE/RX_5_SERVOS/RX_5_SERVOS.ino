@@ -1,5 +1,5 @@
 /*
-  *-----RX-------RECIVER Brazo Robot (4 servos)---------*
+  *-----RX-------RECIVER Brazo Robot ---------*
   * Arduino   NFR24
   *   7       CE
   *   8       CSN
